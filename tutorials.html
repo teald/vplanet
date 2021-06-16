@@ -5,10 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TODO &mdash; VPLanet 1.1.0
+  <title>Tutorials &mdash; VPLanet 2.0.3
  documentation</title>
   
 
@@ -29,16 +30,21 @@
   
 
   
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
+  
 
   
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="VPLanet 1.1.0
+    <link rel="top" title="VPLanet 2.0.3
  documentation" href="index.html"/>
-        <link rel="up" title="For developers" href="developers.html"/>
-        <link rel="next" title="Writing Tests, Bug Reports, and Examples" href="tests.html"/>
-        <link rel="prev" title="Bugs" href="bugs.html"/> 
+        <link rel="next" title="VPLanet Architecture" href="architecture.html"/>
+        <link rel="prev" title="Parameter Sweep Guide" href="parametersweep.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -66,7 +72,7 @@
             
             
               <div class="version">
-                1.1.0
+                2.0.3
 
               </div>
             
@@ -89,24 +95,27 @@
             
             
                 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="conduct.html">Code of Conduct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installing VPLanet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Modules and Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html#input-file-structure">Input File Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html#output-file-structure">Output File Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html#input-options">Input Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html#output-parameters">Output Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Options and Outputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src.html">C API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vplot.html">VPLOT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parametersweep.html">Parameter Sweep Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For developers</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="StyleGuide.html">Style Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bugs.html">Bugs and Issues</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">To Do List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.html">Writing Tests, Bug Reports, and Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">Code Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html">Add an Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="option.html">Add an Option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primaryvariable.html">Add a Primary Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupling.html">Coupling Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html">Add a New Module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference external" href="http://faculty.washington.edu/rkb9/vplanet/Workshop21/">Workshop Lectures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">Contributor’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repos.html">Other VPLanet Repositories</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/VirtualPlanetaryLaboratory/vplanet">GitHub</a></li>
 </ul>
 
@@ -138,10 +147,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">VPLanet</a> &raquo;</li>
       
-        <li><a href="developers.html">For developers</a>&raquo;</li>
-      
     
-      <li>TODO</li>
+      <li>Tutorials</li>
     
       <li class="wy-breadcrumbs-aside">
         
@@ -154,48 +161,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="todo">
-<h1>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h1>
-<p>A list of all the to-dos scattered about the repo.</p>
-<p>To create a <strong>to-do</strong> item anywhere in the <em>docs</em>:</p>
-<blockquote>
-<div><div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">todo</span><span class="p">::</span>
-
-    <span class="gs">**@username**</span>: To-do message here, which can
-    span multiple lines. Mind the indentations;
-    copy this example exactly to be safe.
-</pre></div>
+  <section id="tutorials">
+<h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
+<p>Please view the following pages for written descriptions of how to:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Code Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output.html">Add an Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="option.html">Add an Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primaryvariable.html">Add a Primary Variable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coupling.html">Coupling Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module.html">Add a New Module</a></li>
+</ul>
 </div>
-</div></blockquote>
-<p>To create a <strong>to-do</strong> anywhere in the <em>code</em>, you need
-to explicitly escape the reStructureText:</p>
-<blockquote>
-<div><div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
-<span class="cm">Function that does something.</span>
-<span class="cm">@param something The something we&#39;re gonna do</span>
-
-<span class="cm">\rst</span>
-
-<span class="cm">    .. todo::</span>
-
-<span class="cm">        **@username**: Make this function actually</span>
-<span class="cm">        do something!</span>
-
-<span class="cm">\endrst</span>
-
-<span class="cm">*/</span>
-<span class="kt">void</span> <span class="nf">DoSomething</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">something</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">do_something_else</span><span class="p">(</span><span class="n">something</span><span class="p">);</span>
-<span class="p">};</span>
-</pre></div>
-</div>
-</div></blockquote>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p><strong>&#64;rodluger</strong>: Write the documentation for <strong>vplot</strong></p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="vplot.html#id1"><em>original entry</em></a> is located in /home/travis/build/VirtualPlanetaryLaboratory/vplanet/docs/vplot.rst, line 16.)</p>
-</div>
+</section>
 
 
            </div>
@@ -204,10 +183,10 @@ to explicitly escape the reStructureText:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tests.html" class="btn btn-neutral float-right" title="Writing Tests, Bug Reports, and Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="architecture.html" class="btn btn-neutral float-right" title="VPLanet Architecture" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="bugs.html" class="btn btn-neutral" title="Bugs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="parametersweep.html" class="btn btn-neutral" title="Parameter Sweep Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -237,16 +216,16 @@ to explicitly escape the reStructureText:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.0',
+            VERSION:'2.0.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="_static/documentation_options.js"></script>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 
